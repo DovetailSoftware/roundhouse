@@ -42,7 +42,7 @@
     <mkdir dir="${dirs.merge.log}" />
     <mkdir dir="${dirs.merge.from}" />
     <mkdir dir="${dirs.merge.to}" />
-    <property name="args.ilmerge" value="${args.ilmerge} /keyfile:${file.key}" if="${file::exists(file.key)}"/>
+    <property name="args.ilmerge" value="${args.ilmerge}"/>
   </target>
 
   <target name="get_regular_dlls">
@@ -52,7 +52,6 @@
       <in>
         <items>
           <exclude name="${dirs.merge.from}\${file.merge.name}" />
-          <exclude name="${dirs.merge.from}\log4net.dll" />
           <exclude name="${dirs.merge.from}\System.Data.SQLite.dll" />
           <exclude name="${dirs.merge.from}\Microsoft.Build.Framework.dll" />
           <exclude name="${dirs.merge.from}\roundhouse.tasks.dll" />
